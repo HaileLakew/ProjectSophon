@@ -45,10 +45,15 @@ jobs:
       # - name: Run a one-line script
       #   run: echo ${{ inputs.taggedUser }} 
 
-      - name: Run a one-line script
-        run: echo ${{ inputs.coreValue }} 
+      - run: touch reportFrom${{ inputs.postingUserEmail }}
 
       - name: Run a one-line script
-        run: echo ${{ inputs.reason }} 
+        run: echo ${{ inputs.postingUserEmail }} >> reportFrom${{ inputs.postingUserEmail }}
+
+      - name: Run a one-line script
+        run: echo ${{ inputs.coreValue }} >> reportFrom${{ inputs.postingUserEmail }}
+
+      - name: Run a one-line script
+        run: echo ${{ inputs.reason }} >> reportFrom${{ inputs.postingUserEmail }}
                 
       
