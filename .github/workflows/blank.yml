@@ -55,5 +55,12 @@ jobs:
 
       - name: Run a one-line script
         run: echo ${{ inputs.reason }} >> reportFrom${{ inputs.postingUserEmail }}
+
+      - run: |
+          git config --global user.name 'Haile Lakew'
+          git config --global user.email 'haile.lakewcs@gmail.com'
+          git add .
+          git commit -am "Automated report"
+          git push
                 
       
