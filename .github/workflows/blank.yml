@@ -43,7 +43,12 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo ${{ inputs.taggedUserName }} 
+        run: echo ${{ inputs.taggedUser }} 
 
       - name: Run a one-line script
         run: echo ${{ inputs.coreValue }} 
+
+      - name: Run a one-line script
+        run: echo ${{ inputs.reason }} 
+                
+      
